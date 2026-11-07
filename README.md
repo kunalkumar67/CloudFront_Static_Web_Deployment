@@ -9,15 +9,15 @@
        '-._____.-' '-._____.-' '-._____.-'
              \          |          /
               \_________|_________/
-
-   ██████╗██╗      ██████╗ ██╗   ██╗██████╗
-  ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗
-  ██║     ██║     ██║   ██║██║   ██║██║  ██║
-  ██║     ██║     ██║   ██║██║   ██║██║  ██║
-  ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝
-   ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝
-              S T A T I C   W E B
-           S 3  ×  C L O U D F R O N T
+ 
+    ██████╗██╗      ██████╗ ██╗   ██╗██████╗
+   ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗
+   ██║     ██║     ██║   ██║██║   ██║██║  ██║
+   ██║     ██║     ██║   ██║██║   ██║██║  ██║
+   ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝
+    ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝
+               S T A T I C   W E B
+            S 3  ×  C L O U D F R O N T
 ```
 
 # ☁️ CloudFront Static Website Deployment
@@ -27,7 +27,7 @@
 [![HTML](https://img.shields.io/badge/Frontend-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/Styles-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-**A static website hosted on Amazon S3 and delivered globally through Amazon CloudFront.** This project demonstrates the core steps of publishing static site files to S3 and using a CDN distribution as the public delivery endpoint.
+**A static website hosted on Amazon S3 and delivered globally through Amazon CloudFront.** This project demonstrates the core steps of publishing static site files to S3 and using a CDN distribution layer to serve them efficiently.
 
 <div align="center">
   <a href="https://d3rnejvmhfsfau.cloudfront.net"><strong>🌐 View the live website</strong></a>
@@ -46,7 +46,7 @@
 
 ## 🌟 Project overview
 
-The repository contains a static website built with HTML and CSS, along with its supporting assets. The site is stored in an Amazon S3 bucket configured for website hosting, with an Amazon CloudFront distribution providing the user-facing delivery URL.
+The repository contains a static website built with HTML and CSS, along with its supporting assets. The site is stored in an Amazon S3 bucket configured for website hosting, with an Amazon CloudFront distribution used as the public delivery layer.
 
 The project illustrates a common cloud hosting pattern for static content:
 
@@ -61,13 +61,13 @@ The project illustrates a common cloud hosting pattern for static content:
 ┌─────────────────┐       HTTPS        ┌────────────────────┐
 │ Visitor's device│ ──────────────────▶ │ Amazon CloudFront  │
 └─────────────────┘                    │  CDN / edge cache  │
-                                       └─────────┬──────────┘
-                                                 │ Origin request
-                                                 ▼
-                                       ┌────────────────────┐
-                                       │ Amazon S3 website  │
-                                       │ HTML, CSS, assets  │
-                                       └────────────────────┘
+                                        └─────────┬──────────┘
+                                                  │ Origin request
+                                                  ▼
+                                        ┌────────────────────┐
+                                        │ Amazon S3 website  │
+                                        │ HTML, CSS, assets  │
+                                        └────────────────────┘
 ```
 
 CloudFront is the intended public entry point. The S3 website endpoint is configured as the origin in this setup.
@@ -103,7 +103,8 @@ CloudFront_Static_Web_Deployment/
 ├── S3 Website Endpoint.png      # Website endpoint view
 ├── my-180203-bucket_objects.png # Bucket objects view
 ├── my_cloudfront_behaviors.png  # Distribution behaviors
-└── my_cloudfront_origins.png    # Distribution origins
+├── my_cloudfront_origins.png    # Distribution origins
+└── README.md                   # Project documentation
 ```
 
 ## 🛠️ Deployment workflow
@@ -134,15 +135,15 @@ The repository includes screenshots documenting the AWS setup:
 
 #### Bucket configuration
 
-<img src="S3_bucket.png" alt="Amazon S3 bucket configuration" width="850" />
+<img src="screenshots/S3_bucket.png" alt="Amazon S3 bucket configuration" width="850" />
 
 #### Static website hosting
 
-<img src="Static%20Website%20Hosting.png" alt="S3 static website hosting configuration" width="850" />
+<img src="screenshots/Static%20Website%20Hosting.png" alt="S3 static website hosting configuration" width="850" />
 
 #### Bucket policy
 
-<img src="Bucket_Policy.png" alt="S3 bucket policy configuration" width="850" />
+<img src="screenshots/Bucket_Policy.png" alt="S3 bucket policy configuration" width="850" />
 
 </details>
 
@@ -151,34 +152,48 @@ The repository includes screenshots documenting the AWS setup:
 
 #### Distribution overview and details
 
-<img src="CloudFront.png" alt="CloudFront distribution overview" width="850" />
+<img src="screenshots/CloudFront.png" alt="CloudFront distribution overview" width="850" />
 
-<img src="CloudFront_Details.png" alt="CloudFront distribution details" width="850" />
+<img src="screenshots/CloudFront_Details.png" alt="CloudFront distribution details" width="850" />
 
 #### Origins and behaviors
 
-<img src="my_cloudfront_origins.png" alt="CloudFront origins configuration" width="850" />
+<img src="screenshots/my_cloudfront_origins.png" alt="CloudFront origins configuration" width="850" />
 
-<img src="my_cloudfront_behaviors.png" alt="CloudFront behaviors configuration" width="850" />
+<img src="screenshots/my_cloudfront_behaviors.png" alt="CloudFront behaviors configuration" width="850" />
 
 </details>
 
 <details>
 <summary><strong>Website and S3 objects</strong></summary>
 
-<img src="S3%20Website%20Endpoint.png" alt="S3 website endpoint" width="850" />
+<img src="screenshots/S3%20Website%20Endpoint.png" alt="S3 website endpoint" width="850" />
 
-<img src="S3%20Object.png" alt="S3 object URL" width="850" />
+<img src="screenshots/S3%20Object.png" alt="S3 object URL" width="850" />
 
-<img src="my-180203-bucket_objects.png" alt="Objects stored in the S3 bucket" width="850" />
+<img src="screenshots/my-180203-bucket_objects.png" alt="Objects stored in the S3 bucket" width="850" />
 
 </details>
 
+### Key deployment screenshots
+
+![S3 bucket configuration](screenshots/S3_bucket.png)
+
+![Static website hosting configuration](screenshots/Static%20Website%20Hosting.png)
+
+![Bucket policy configuration](screenshots/Bucket_Policy.png)
+
+![CloudFront overview](screenshots/CloudFront.png)
+
+![CloudFront distribution details](screenshots/CloudFront_Details.png)
+
+![CloudFront origins configuration](screenshots/my_cloudfront_origins.png)
+
 ## 🔐 Security considerations
 
-This project uses an S3 **website endpoint** as the CloudFront origin. S3 website endpoints do not support HTTPS between CloudFront and the origin, and this deployment pattern may require public access to the website content. Consider the access model carefully before using it for production.
+This project uses an S3 **website endpoint** as the CloudFront origin. S3 website endpoints do not support HTTPS between CloudFront and the origin, and this deployment pattern may require public access to the bucket for the origin to work.
 
-For a production-oriented private-origin design, consider using the S3 REST endpoint with CloudFront Origin Access Control (OAC), block public access to the bucket, and enable HTTPS viewer access. Avoid storing secrets or sensitive data in a public static website bucket.
+For a production-oriented private-origin design, consider using the S3 REST endpoint with CloudFront Origin Access Control (OAC), block public access to the bucket, and enable HTTPS viewer access for end users.
 
 ## 🧰 Technology stack
 
