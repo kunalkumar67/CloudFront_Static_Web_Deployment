@@ -20,7 +20,7 @@
             S 3  ×  C L O U D F R O N T
 ```
 
-# ☁️ CloudFront Static Website Deployment - ACCENTURE'S TRAINING PROJECT
+# ☁️ CloudFront Static Website Deployment - ACCENTURE'S TRAINING PROJECT xoxox
 
 [![Amazon S3](https://img.shields.io/badge/AWS-Amazon%20S3-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
 [![Amazon CloudFront](https://img.shields.io/badge/AWS-CloudFront-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/cloudfront/)
